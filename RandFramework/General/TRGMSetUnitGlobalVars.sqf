@@ -74,7 +74,7 @@ if (isClass(configFile >> "CfgPatches" >> "UK3CB_BAF_Equipment") &&
 		isClass(configFile >> "CfgPatches" >> "UK3CB_BAF_Vehicles") &&
 		isClass(configFile >> "CfgPatches" >> "UK3CB_BAF_Weapons") &&
 		isClass(configFile >> "CfgPatches" >> "UK3CB_BAF_Units_Common")) then {
-	DefaultFriendlyFactionArray = DefaultFriendlyFactionArray + [9];
+	DefaultFriendlyFactionArray = DefaultFriendlyFactionArray + [8];
 	DefaultFriendlyFactionArrayText = DefaultFriendlyFactionArrayText + ["3CB MTP"];
 
 };
