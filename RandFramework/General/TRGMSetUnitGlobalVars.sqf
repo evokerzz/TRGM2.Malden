@@ -19,23 +19,25 @@ publicVariable "DefaultFriendlyFactionArray";
 publicVariable "DefaultFriendlyFactionArrayText";
 
 //[(configFile >> "CfgPatches"),1, true, true ] call BIS_fnc_returnChildren;
+//IF RHSAFRF is active
+if ((isClass(configFile >> "CfgPatches" >> "rhs_main"))) then {
+	DefaultEnemyFactionArray = DefaultEnemyFactionArray + [4];
+	DefaultEnemyFactionArrayText = DefaultEnemyFactionArrayText + ["RHS - Russia MSV"];
+};
+//IF RHSAFRF + RHSUSAF + RHSGREF are active
 if ((isClass(configFile >> "CfgPatches" >> "rhs_main")) &&
 		isClass(configFile >> "CfgPatches" >> "rhsusf_main") &&
 		isClass(configFile >> "CfgPatches" >> "rhsgref_main")) then {
-	//IF RHSAFRF, RHSUSAF, RHSGREF are active
-	DefaultEnemyFactionArray = DefaultEnemyFactionArray + [4];
-	DefaultEnemyFactionArrayText = DefaultEnemyFactionArrayText + ["RHS - Russia MSV"];
-
 	DefaultEnemyFactionArray = DefaultEnemyFactionArray + [8];
 	DefaultEnemyFactionArrayText = DefaultEnemyFactionArrayText + ["RHS - ChDKZ Insurgents"];
 
 	DefaultFriendlyFactionArray = DefaultFriendlyFactionArray + [6];
 	DefaultFriendlyFactionArrayText = DefaultFriendlyFactionArrayText + ["RHS Chernarus Ground Forces"];
 };
+//IF RHSUSAF is active
 if (isClass(configFile >> "CfgPatches" >> "rhsusf_main")) then {
-	//IF RHSUSAF is active
 	DefaultFriendlyFactionArray = DefaultFriendlyFactionArray + [3];
-	DefaultFriendlyFactionArrayText = DefaultFriendlyFactionArrayText + ["RHS USMC-F"];
+	DefaultFriendlyFactionArrayText = DefaultFriendlyFactionArrayText + ["RHS USMC"];
 
 
 };
@@ -72,8 +74,15 @@ if (isClass(configFile >> "CfgPatches" >> "UK3CB_BAF_Equipment") &&
 		isClass(configFile >> "CfgPatches" >> "UK3CB_BAF_Vehicles") &&
 		isClass(configFile >> "CfgPatches" >> "UK3CB_BAF_Weapons") &&
 		isClass(configFile >> "CfgPatches" >> "UK3CB_BAF_Units_Common")) then {
-	DefaultFriendlyFactionArray = DefaultFriendlyFactionArray + [8];
+	DefaultFriendlyFactionArray = DefaultFriendlyFactionArray + [9];
 	DefaultFriendlyFactionArrayText = DefaultFriendlyFactionArrayText + ["3CB MTP"];
+
+};
+//IF RHSUSAF & BWMOD are active
+if (isClass(configFile >> "CfgPatches" >> "bwa3_common") &&
+		isClass(configFile >> "CfgPatches" >> "rhsusf_main")) then {
+	DefaultFriendlyFactionArray = DefaultFriendlyFactionArray + [9];
+	DefaultFriendlyFactionArrayText = DefaultFriendlyFactionArrayText + ["BWmod + RHS USMC"];
 
 };
 
