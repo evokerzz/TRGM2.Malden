@@ -4904,10 +4904,12 @@ setFace=GreekHead_A3_07;
 setSpeaker=ace_novoice;
 #
 OtherObjects:
-AirSupport1=rhsusf_f22; 				//RHS
-AirSupport2=RHS_A10; 					//RHS
-//AirSupport1=FIR_F15E_SJ; 			firewill
-//AirSupport2=FIR_A10C; 				firewill
+//rhs planes;
+AirSupport1=rhsusf_f22;
+AirSupport2=RHS_A10;
+//firewill planes;
+//AirSupport1=FIR_F15E_SJ;
+//AirSupport2=FIR_A10C;
 ArmoredCar=BWA3_Eagle_FLW100_Fleck;
 TankorAPC=BWA3_Leopard2_Fleck;
 UnarmedCar=BWA3_Eagle_Fleck;
@@ -4924,8 +4926,10 @@ FriendlyScoutVehicles=[""BWA3_Eagle_FLW100_Fleck"",""BWA3_Eagle_Fleck""];
 FriendlyCheckpointUnits=[""BWA3_Rifleman_Fleck""];
 FriendlyFastResponseVehicles=[""BWA3_Eagle_Fleck""];	
 SupplySupportChopperOptions=[""RHS_MELB_MH6M""];
-//AirSupportOptions=[""FIR_A10C""];				firewill
-AirSupportOptions=[""RHS_A10""]; 					//RHS
+//firewill a10;
+//AirSupportOptions=[""FIR_A10C""];
+//rhs a10;
+AirSupportOptions=[""RHS_A10""];
 ArtiSupportOptions=[""rhsusf_m109_usarmy""];
 FriendlyVictims = [""BWA3_Rifleman_Fleck""];
 FriendlyVictimVehs = [""Land_Wreck_Slammer_F"",""Land_Wreck_Heli_Attack_01_F"",""Land_Wreck_HMMWV_F""];
